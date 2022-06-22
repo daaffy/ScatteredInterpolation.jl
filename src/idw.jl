@@ -12,7 +12,7 @@ struct Shepard{T} <: ShepardType where T <: Real
 end
 Shepard() = Shepard(2)
 
-struct ShepardInterpolant{T1, T2, F, M} <: ScatteredInterpolant where {T1 <: AbstractArray, T2 <: AbstractMatrix{<:Real}}
+mutable struct ShepardInterpolant{T1, T2, F, M} <: ScatteredInterpolant where {T1 <: AbstractArray, T2 <: AbstractMatrix{<:Real}}
 
     data::T1
     points::T2
